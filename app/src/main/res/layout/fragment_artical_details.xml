@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/artical_image"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:scaleType="centerCrop"
+        android:importantForAccessibility="no"
+        app:shapeAppearanceOverlay="@style/RoundedSquare"
+        tools:src="@tools:sample/backgrounds/scenic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="35dp"/>
+
+
+    <TextView
+        android:id="@+id/article_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginHorizontal="8dp"
+        android:layout_marginTop="16dp"
+        android:text="@{article.title}"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/artical_image"
+        android:textStyle="bold"
+        android:layout_margin="35dp"
+        android:textSize="22sp"
+        tools:text="SAG Awards 2024: Oppenheimer dominates ahead of Oscars" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/artical_deatails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/article_title"
+        android:layout_marginTop="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginHorizontal="45dp"
+        android:background="@color/white">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/article_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="12dp"
+                    android:layout_marginBottom="12dp"
+                   android:textStyle="normal"
+                    android:text="@{article.description}"
+                    tools:text="@string/appbar_scrolling_view_behavior"
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/open_article"
+                    style="@style/Widget.Material3.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:layout_margin="8dp"
+                    android:gravity="center"
+                    android:text="@string/view_full_article"
+                    android:textSize="14sp" />
+            </LinearLayout>
+        </ScrollView>
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

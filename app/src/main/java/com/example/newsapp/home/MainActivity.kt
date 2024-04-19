@@ -1,12 +1,12 @@
-package com.example.newsapp
+package com.example.newsapp.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.newsapp.R
 import com.example.newsapp.databinding.ActivityMainBinding
-import com.example.newsapp.databinding.FragmentNewsSourcesBinding
-import com.example.newsapp.newsSources.NewsSourcesFragment
+import com.example.newsapp.home.newsSources.NewsSourcesFragment
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity()  {
     private lateinit var viewBinding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -22,6 +22,19 @@ class MainActivity : AppCompatActivity() {
                 NewsSourcesFragment()
             )
             .commit()
+        
 
     }
+
+    private var onSearchClickListener : OnSearchClickListener?= null
+
+    fun setOnSearchClickListener(listener: OnSearchClickListener){
+        onSearchClickListener = listener
+
+    }
+    fun interface OnSearchClickListener{
+        fun onSearchClick(query:String)
+    }
+
+
 }

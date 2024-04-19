@@ -1,4 +1,4 @@
-package com.example.newsapp.newsSources
+package com.example.newsapp.home.newsSources
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -11,7 +11,7 @@ import com.example.newsapp.api.ApiManager
 import com.example.newsapp.api.model.sourcesResponse.Source
 import com.example.newsapp.api.model.sourcesResponse.SourcesResponse
 import com.example.newsapp.databinding.FragmentNewsSourcesBinding
-import com.example.newsapp.newsFragment.NewsFragment
+import com.example.newsapp.home.newsFragment.NewsFragment
 import com.google.android.material.tabs.TabLayout
 import com.google.gson.Gson
 import retrofit2.Call
@@ -50,7 +50,7 @@ class NewsSourcesFragment : Fragment() {
             .replace(R.id.fragment_container , newsFragment)
             .commit()
         binding.tryAgain.setOnClickListener {
-         binding.errorView.isVisible = false
+         //binding.errorView.isVisible = false
             getNewsSources()
         }
     }

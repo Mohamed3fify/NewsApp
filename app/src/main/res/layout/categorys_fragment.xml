@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <TextView
+        android:id="@+id/category_choies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/pick_your_category_of_interest"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="#4F5A69"
+        android:layout_margin="20dp"
+        android:textSize="25sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:orientation="vertical"
+        android:weightSum="3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/category_choies">
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <LinearLayout
+            android:id="@+id/category_sports"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_red_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_ball" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="sports"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/category_Politics"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginHorizontal="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/rounded_blue_corner"
+            android:gravity="center"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_politics" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="politics"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/category_health"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_pink_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_health" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Health"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/category_business"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_beige_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_bussines" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Business"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:id="@+id/category_enviroment"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_light_blue_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_environment" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Enviroment"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/category_science"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/rounded_yellow_corner"
+                android:gravity="center"
+                android:orientation="vertical"
+                tools:ignore="NestedWeights">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:adjustViewBounds="true"
+                    android:importantForAccessibility="no"
+                    android:src="@drawable/ic_science" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Scencie"
+                    android:textColor="@color/white"
+                    android:textSize="22sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

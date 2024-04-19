@@ -3,4 +3,7 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="try_again">Try Again</string>
+    <string name="pick_your_category_of_interest">Pick your category of interest</string>
+    <string name="search_item">search iten</string>
+    <string name="view_full_article">view artical</string>
 </resources>

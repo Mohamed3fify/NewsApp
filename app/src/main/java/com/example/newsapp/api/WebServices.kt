@@ -17,4 +17,10 @@ interface WebServices {
         @Query("sources") sources: String?,
         @Query("apiKey") apiKey: String = Constant.apiKey,
     ): Call<NewsResponse>
+
+    @GET("v2/everything")
+    fun getArticalByQueary(
+        @Query("sources") apiKey: String = Constant.apiKey,
+        @Query("q") query:String
+    ): Call<NewsResponse>
 }
